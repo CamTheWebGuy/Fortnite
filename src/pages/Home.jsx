@@ -12,7 +12,7 @@ export default function Home() {
     <Fragment>
       <Header />
 
-      <video className='video-hero md:h-screen' autoPlay muted loop>
+      <video className='video-hero h-screen' autoPlay muted loop>
         <source src={video} type='video/mp4' />
       </video>
       <img
@@ -20,16 +20,19 @@ export default function Home() {
         src={chapter4}
         alt='Fortnite Chapter 4'
       />
+      <div className='hero-cta text-center mt-5'>
+        <button className='fn-btn'>Watch Trailer</button>
+      </div>
 
       <main className='main-content'>
-        <section className='featured px-5 flex'>
-          <div className='w-3/6 flex featured-card'>
+        <section className='featured px-5 flex flex-wrap'>
+          <div className='w-full lg:w-3/6 flex flex-wrap mt-clear md:mt-fc featured-card'>
             <img
-              className='w-3/6 fc-image'
+              className='w-full md:w-3/6 mh-280 md:max-h-fit fc-image'
               src={featured1}
               alt='Fortnite Promo'
             />
-            <div className='w-3/6 p-5 text-white'>
+            <div className='w-full md:w-3/6 p-5 text-white'>
               <h3 className='font-bold text-3xl lucky-font'>
                 The New Island's Your Domain
               </h3>
@@ -43,13 +46,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='w-3/6 flex featured-card'>
+          <div className='w-full lg:w-3/6 mt-clear md:mt-fc flex flex-wrap featured-card'>
             <img
-              className='w-3/6 fc-image'
+              className='w-full md:w-3/6 mh-280 md:max-h-fit fc-image'
               src={featured2}
               alt='Fortnite Promo'
             />
-            <div className='w-3/6 p-5 text-white'>
+            <div className='w-full md:w-3/6 p-5 text-white'>
               <h3 className='font-bold text-3xl lucky-font'>
                 Take The Offensive In Fortnite Zero Build
               </h3>
