@@ -6,6 +6,7 @@ import chapter4 from '../assets/chapter4.png';
 import promo1 from '../assets/overview.jpeg';
 import featured1 from '../assets/featured1.png';
 import featured2 from '../assets/featured2.png';
+import ctabg from '../assets/cta-bg.png';
 
 export default function Home() {
   return (
@@ -66,6 +67,24 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <section className='mt-5 cta'>
+        {/* <img src={ctabg} alt='Fortnite Season 4' /> */}
+        <img
+          className='w-4/12 mx-auto pt-50 cta-logo'
+          src={chapter4}
+          alt='Fortnite Chapter 4'
+        />
+        <div className='hero-cta text-center mt-10'>
+          <button className='fn-btn'>Watch Trailer</button>
+        </div>
+      </section>
+
+      <footer>
+        <p className='text-center text-white font-bold text-sm py-5'>
+          All Rights Reserved 2022
+        </p>
+      </footer>
     </Fragment>
   );
 }

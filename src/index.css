@@ -73,3 +73,29 @@
   color: #fff;
   transition: background-color 0.2s ease;
 }
+
+.nav-bg {
+  background-color: rgb(42, 42, 42);
+  transition: all 0.5s ease;
+  transform-origin: top left;
+  max-height: 65px;
+  z-index: 1;
+}
+
+.hero-cta {
+  z-index: -1;
+}
+
+.cta {
+  background: url('./assets/cta-bg.png') no-repeat center center;
+  background-size: cover;
+  min-height: 721px;
+}
+
+.cta-logo {
+  padding-top: 390px;
+}
+
+footer {
+  background-color: rgb(42, 42, 42);
+}
