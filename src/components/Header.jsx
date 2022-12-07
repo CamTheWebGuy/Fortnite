@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import logo from '../assets/logo.png';
 import { FaBars } from 'react-icons/fa';
 import { HiX } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
 
 export default function Header() {
   const [colorChange, setColorchange] = useState(false);
@@ -15,13 +16,20 @@ export default function Header() {
   };
   window.addEventListener('scroll', changeNavbarColor);
 
+  const navigate = useNavigate();
+
   return (
     <Fragment>
       <nav
         className={`fixed flex w-full justify-between ${
           colorChange ? 'nav-bg' : ''
         }`}>
-        <img className='w-2/5 lg:w-1/5' src={logo} alt='Fortnite' />
+        <img
+          className='w-2/5 lg:w-1/5 cursor-pointer'
+          src={logo}
+          alt='Fortnite'
+          onClick={() => navigate('/')}
+        />
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className='mr-10 text-white font-bold lg:hidden'>
@@ -41,7 +49,11 @@ export default function Header() {
           <li className='pr-6'>Watch</li>
           <li className='pr-6'>News</li>
           <li className='pr-6'>FAQ</li>
-          <li className='pr-6'>Forums</li>
+          <li
+            className='pr-6 cursor-pointer'
+            onClick={() => navigate('/forums')}>
+            Forums
+          </li>
           <li className='pr-6'>Merch</li>
           <li className='pr-6'>Help</li>
           <li className='pr-6'>Events</li>
